@@ -19,7 +19,7 @@ public class PedidoServiceImpl implements PedidoService {
     private final String externalEndpoint;
 
     @Autowired
-    public PedidoServiceImpl(RestTemplate restTemplate,
+    public PedidoServiceImpl(XmlJsonConverter xmlJsonConverter, RestTemplate restTemplate,
                              @Value("${external.endpoint}") String externalEndpoint) {
         this.xmlJsonConverter = xmlJsonConverter;
         this.restTemplate = restTemplate;
